@@ -59,8 +59,9 @@ class LoginController extends Controller
     {
         $user = Socialite::driver('github')->user();
 
-        $localUser = User::firstOrCreate(['github_token' => $user->token], [
-            'github_token' => $user->token,
+        // dd($user);
+        $localUser = User::updateOrCreate(['email' => $user->email], [
+            'github_token' => $user->id,
             'name' => $user->name,
             'email' => $user->email,
             'avatar' => $user->avatar,
