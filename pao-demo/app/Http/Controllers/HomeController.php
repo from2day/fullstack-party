@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use GrahamCampbell\GitHub\Facades\GitHub;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+        dd(GitHub::me()->organizations());
+        // we're done here - how easy was that, it just works!
+        
+
         return view('home');
     }
 }
