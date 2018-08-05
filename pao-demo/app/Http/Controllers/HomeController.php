@@ -24,8 +24,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // dd(GitHub::me()->organizations());
-        // we're done here - how easy was that, it just works!
         $issues = GitHub::issues()->all('from2day', 'fullstack-party');
 
         return view('home')->with('issues', $issues);

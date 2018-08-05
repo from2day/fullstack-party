@@ -80,4 +80,9 @@ return [
 
     ],
 
+    'project' => [
+        'username' => 'from2day',
+        'reponame' => 'fullstack-party'
+    ]
+
 ];
