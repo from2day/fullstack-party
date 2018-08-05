@@ -24,7 +24,7 @@ return [
     |
     */
 
-    'default' => 'app',
+    'default' => 'main',
 
     /*
     |--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ return [
     'connections' => [
 
         'main' => [
-            'token'      => 'your-token',
+            'token'      => env('GITHUB_CLIENT_TOKEN'),
             'method'     => 'token',
             // 'backoff'    => false,
             // 'cache'      => false,
@@ -54,7 +54,7 @@ return [
             'clientSecret' => env('GITHUB_CLIENT_SECRET'), // Your GitHub Client Secret
             'method'       => 'application',
             // 'backoff'      => false,
-            // 'cache'        => false,
+            'cache'        => false,
             // 'version'      => 'v3',
             // 'enterprise'   => false,
         ],
