@@ -58,17 +58,16 @@ class LoginController extends Controller
     public function handleProviderCallback()
     {
         $user = Socialite::driver('github')->user();
-
         // dd($user);
         $localUser = User::updateOrCreate(['email' => $user->email], [
-            'github_token' => $user->id,
+            'github_token' => $user->token,
             'name' => $user->name,
             'email' => $user->email,
             'avatar' => $user->avatar,
             'password' => Hash::make($user->nickname),
 
         ]);
-
+// dd($user);
         if ($localUser) {
             auth()->login($localUser);
         }

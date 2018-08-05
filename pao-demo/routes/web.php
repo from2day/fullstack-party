@@ -1,5 +1,7 @@
 <?php
 
+use GrahamCampbell\GitHub\Facades\GitHub;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +14,11 @@
 */
 
 Route::get('/', function () {
+    // dd(GitHub::getDefaultConnection());
+    // dd(GitHub::me()->emails()->all());
+    // dd(GitHub::issues()->all('from2day', 'fullstack-party'));
+    // from2day/fullstack-party
+
     return view('welcome');
 });
 

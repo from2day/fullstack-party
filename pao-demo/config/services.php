@@ -37,6 +37,6 @@ return [
     'github' => [
         'client_id' => env('GITHUB_CLIENT_ID'),         // Your GitHub Client ID
         'client_secret' => env('GITHUB_CLIENT_SECRET'), // Your GitHub Client Secret
-        'redirect' => 'http://ae9ddcd4.ngrok.io/login/github/callback',
+        'redirect' => 'http://testio.test/login/github/callback',
     ],
 ];
