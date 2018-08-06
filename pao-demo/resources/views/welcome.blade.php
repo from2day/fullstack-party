@@ -83,7 +83,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ route('login.github')}}">Login With GitHub</a>
+                    @auth
+                        <a href="{{ route('issues.index')}}">See issues</a>
+                    @else 
+                        <a href="{{ route('login.github')}}">Login With GitHub</a>
+                    @endauth
                 </div>
             </div>
         </div>
