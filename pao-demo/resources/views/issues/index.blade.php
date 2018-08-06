@@ -24,7 +24,23 @@
             </div>
             @endforeach
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" style="
+        background: url(https://tesonet.com/wp-content/themes/tesonet-theme/dist/images/map.svg) no-repeat;
+    background-position-x: 37%;
+    background-position-y: -137px;
+    background-size: 677px;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    background-size: 430px;
+    background-position: -45px 0;
+    background-size: 677px;
+    background-position: 37% -137px;
+    background-color: #2c3998!important;
+    ">
         </div>
     </div>
 </div>
