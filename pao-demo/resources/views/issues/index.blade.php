@@ -19,7 +19,7 @@
                     <a href="{{ route('issues.show', $issue['number']) }}">
                         {{ $issue['title'] }}
                     </a></h5>
-                    <p class="card-subtitle mb-2 text-muted">#{{ $issue['number'] }} by {{ $issue['user']['login'] }} </p>
+                    <p class="card-subtitle mb-2 text-muted">#{{ $issue['number'] }} by {{ $issue['user']['login'] }} {{ Carbon\Carbon::parse($issue['created_at'])->diffForHumans(Carbon\Carbon::now()) }}</p>
                 </div>
             </div>
             @endforeach

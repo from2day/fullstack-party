@@ -17,7 +17,7 @@
                     <p class="card-text">
                         {{ $issue['body']}}
                     </p>
-                    <p><span class="badge badge-success">{{ $issue['state']}}</span></p>
+                    <p><span class="badge badge-success">{{ $issue['state']}}</span> {{ Carbon\Carbon::parse($issue['created_at'])->diffForHumans(Carbon\Carbon::now()) }}</p>
                 </div>
             </div>
         </div>
