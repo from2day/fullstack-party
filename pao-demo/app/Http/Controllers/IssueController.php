@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use GrahamCampbell\GitHub\GitHubManager;
-// use GrahamCampbell\GitHub\Facades\GitHub;
 
 class IssueController extends Controller
 {
@@ -27,7 +26,6 @@ class IssueController extends Controller
             config('github.project.username'), 
             config('github.project.reponame')
         );
-        // dd($issues);
         return view('issues.index')->with('issues', $issues);
     }
 
