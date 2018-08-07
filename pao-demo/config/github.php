@@ -81,8 +81,8 @@ return [
     ],
 
     'project' => [
-        'username' => 'from2day',
-        'reponame' => 'fullstack-party'
+        'username' => env('GITHUB_PROJECT_USERNAME', 'from2day'),
+        'reponame' => env('GITHUB_PROJECT_REPONAME', 'fullstack-party')
     ]
 
 ];
